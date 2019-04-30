@@ -1,0 +1,5 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# batch files are specific to windows and always crlf
+*.bat eol=crlf
