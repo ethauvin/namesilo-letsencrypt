@@ -9,7 +9,7 @@ using [Certbot](https://certbot.eff.org/) DNS-01 challenge validation for domain
 
 ## Setup
 
-The scrips use the [untangle](https://untangle.readthedocs.io/en/latest/) library, if not already installed on your system:
+The scripts use the [untangle](https://untangle.readthedocs.io/en/latest/) library, if not already installed on your system:
 
 ```
 pip install untangle
