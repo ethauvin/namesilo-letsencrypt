@@ -7,9 +7,17 @@ Python scripts (hook) to automate obtaining [Let's Encrypt](https://letsencrypt.
 using [Certbot](https://certbot.eff.org/) DNS-01 challenge validation for domains DNS hosted on
 [NameSilo](https://www.namesilo.com/).
 
+## Setup
+
+The scrips use the [untangle](https://untangle.readthedocs.io/en/latest/) library, if not already installed on your system:
+
+```
+pip install untangle
+```
+
 ## Configuration
 
-Add you [NameSilo API key](https://www.namesilo.com/account_api.php)
+Add your [NameSilo API key](https://www.namesilo.com/account_api.php)
 to the top of the `config.py` file:
 
 ```python
