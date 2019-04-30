@@ -15,6 +15,9 @@ The scripts use the [untangle](https://untangle.readthedocs.io/en/latest/) libra
 pip install untangle
 ```
 
+Download the [latest release](https://github.com/ethauvin/namesilo-letsencrypt/releases) archive and expand it in the desired directory.
+
+
 ## Configuration
 
 Add your [NameSilo API key](https://www.namesilo.com/account_api.php)
@@ -29,21 +32,10 @@ Alternatively, the API key can be set in the `NAMESILO_API` environment variable
 
 ## Using with Certbot
 
-To issue a new certificate using the hook scripts, try something like:
+To issue or renew a certificate using the hook scripts, try something like:
 
 <pre>
 certbot certonly --manual --email you@example.com \
---agree-tos --manual-public-ip-logging-ok \
---preferred-challenges=dns \
---manual-auth-hook <em>/path/to/authenticator.py</em> \
---manual-cleanup-hook <em>/path/to/cleanup.py</em> \
--d *.example.com -d example.com
-</pre>
-
-Or to renew an existing certificate:
-
-<pre>
-certbot renew --manual --email you@example.com \
 --agree-tos --manual-public-ip-logging-ok \
 --preferred-challenges=dns \
 --manual-auth-hook <em>/path/to/authenticator.py</em> \
