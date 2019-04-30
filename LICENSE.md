@@ -1,4 +1,4 @@
-### Copyright &copy; 2019, Erik C. Thauvin ([erik@thauvin.net](mailto:erik@thauvin.net))
+### Copyright &copy; 2019, [Erik C. Thauvin](&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#114;&#105;&#107;&#64;&#116;&#104;&#97;&#117;&#118;&#105;&#110;&#46;&#110;&#101;&#116;)
 #### All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
