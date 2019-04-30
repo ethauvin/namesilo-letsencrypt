@@ -1,5 +1,8 @@
 # NameSilo Let's Encrypt
 
+[![License (3-Clause BSD)](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](http://opensource.org/licenses/BSD-3-Clause)
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
+
 Python scripts (hook) to automate obtaining [Let's Encrypt](https://letsencrypt.org/) certificates,
 using [Certbot](https://certbot.eff.org/) DNS-01 challenge validation for domains DNS hosted on
 [NameSilo](https://www.namesilo.com/).
