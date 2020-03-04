@@ -44,5 +44,5 @@ certbot certonly --manual --email you@example.com \
 </pre>
 
 Please note that NameSilo DNS propagation takes up to **15 minutes**,
-so the scripts will wait 16 minutes before completing.
+so the scripts will wait 20 minutes before completing.
 

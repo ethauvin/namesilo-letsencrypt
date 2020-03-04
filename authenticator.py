@@ -1,8 +1,8 @@
-#!/usr/bin/env python3.7
+#!/usr/bin/env python3.8
 
 #  authenticator.py
 #
-#  Copyright (c) 2019, Erik C. Thauvin (erik@thauvin.net)
+#  Copyright (c) 2019-20, Erik C. Thauvin (erik@thauvin.net)
 #  All rights reserved.
 #
 #  Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,15 @@ import urllib.request
 
 import untangle
 
-from config import apikey
+from config import apikey, wait
+
+
+def sleep(minutes):
+    if minutes < 16:
+        minutes = 16
+    print("Waiting", minutes, "minutes for DNS changes to complete...")
+    time.sleep(minutes * 60)
+
 
 domain = os.environ['CERTBOT_DOMAIN']
 validation = os.environ['CERTBOT_VALIDATION']
@@ -79,5 +87,5 @@ else:
                                xml.namesilo.reply.code.cdata), file=sys.stderr)
     sys.exit(1)
 
-# Sleep 16 minutes
-time.sleep(960)
+# Sleep X minutes
+sleep(wait)
