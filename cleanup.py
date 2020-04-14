@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3
 
 #  cleanup.py
 #
@@ -41,13 +41,14 @@ import untangle
 from config import apikey
 
 domain = os.environ['CERTBOT_DOMAIN']
-tmpdir = os.path.join(tempfile.gettempdir(), f"CERTBOT_{domain}")
+tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_"+domain)
+
 
 if "NAMESILO_API" in os.environ:
     apikey = os.environ['NAMESILO_API']
 
-url = f"https://www.namesilo.com/api/dnsDeleteRecord\
-?version=1&type=xml&key={apikey}&domain={domain}&rrid="
+url = "https://www.namesilo.com/api/dnsDeleteRecord\
+?version=1&type=xml&key="+apikey+"&domain="+domain+"&rrid="
 
 
 def getrequest(record_id):

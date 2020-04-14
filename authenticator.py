@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python3
 
 #  authenticator.py
 #
@@ -51,14 +51,15 @@ def sleep(minutes):
 
 domain = os.environ['CERTBOT_DOMAIN']
 validation = os.environ['CERTBOT_VALIDATION']
-tmpdir = os.path.join(tempfile.gettempdir(), f"CERTBOT_{domain}")
+tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_"+domain)
 
 if "NAMESILO_API" in os.environ:
     apikey = os.environ['NAMESILO_API']
 
-url = f"https://www.namesilo.com/api/dnsAddRecord?\
-version=1&type=xml&key={apikey}&domain={domain}&rrtype=TXT\
-&rrhost=_acme-challenge&rrvalue={validation}&rrttl=3600"
+
+url = "https://www.namesilo.com/api/dnsAddRecord?\
+version=1&type=xml&key="+apikey+"&domain="+domain+"&rrtype=TXT\
+&rrhost=_acme-challenge&rrvalue="+validation+"&rrttl=3600"
 
 req = urllib.request.Request(
     url,
