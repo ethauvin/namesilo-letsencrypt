@@ -59,9 +59,8 @@ def getrequest(record_id):
         url + record_id,
         data=None,
         headers={
-            'User-Agent': ('Mozilla/5.0 (X11; CrOS x86_64 11647.154.0) '
-                           'AppleWebKit/537.36 (KHTML, like Gecko) '
-                           'Chrome/73.0.3683.114 Safari/537.36')
+            'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) '
+                           'Gecko/20100101 Firefox/74.0')
         }
     )
 
