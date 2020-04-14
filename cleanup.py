@@ -42,17 +42,17 @@ import untangle
 from config import apikey
 
 domain = os.environ['CERTBOT_DOMAIN']
-tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_"+domain)
-
+tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_" + domain)
 
 if "NAMESILO_API" in os.environ:
     apikey = os.environ['NAMESILO_API']
 
 tld = tldextract.extract(domain)
-nsdomain = tld.domain+"."+tld.suffix
+nsdomain = tld.domain + "." + tld.suffix
 
 url = "https://www.namesilo.com/api/dnsDeleteRecord\
-?version=1&type=xml&key="+apikey+"&domain="+nsdomain+"&rrid="
+?version=1&type=xml&key=" + apikey + "&domain=" + nsdomain + "&rrid="
+
 
 def getrequest(record_id):
     return urllib.request.Request(

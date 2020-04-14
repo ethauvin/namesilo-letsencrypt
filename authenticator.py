@@ -52,29 +52,28 @@ def sleep(minutes):
 
 domain = os.environ['CERTBOT_DOMAIN']
 validation = os.environ['CERTBOT_VALIDATION']
-tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_"+domain)
+tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_" + domain)
 rrhost = "_acme-challenge"
 
 if "NAMESILO_API" in os.environ:
     apikey = os.environ['NAMESILO_API']
 
-
 tld = tldextract.extract(domain)
-nsdomain = tld.domain+"."+tld.suffix
+nsdomain = tld.domain + "." + tld.suffix
 if tld.subdomain:
-    rrhost += "."+tld.subdomain
+    rrhost += "." + tld.subdomain
 
 url = "https://www.namesilo.com/api/dnsAddRecord?\
-version=1&type=xml&key="+apikey+"&domain="+nsdomain+"&rrtype=TXT\
-&rrhost="+rrhost+"&rrvalue="+validation+"&rrttl=3600"
+version=1&type=xml&key=" + apikey + "&domain=" + nsdomain + "&rrtype=TXT\
+&rrhost=" + rrhost + "&rrvalue=" + validation + "&rrttl=3600"
 
 req = urllib.request.Request(
     url,
     data=None,
     headers={
-        'User-Agent': ('Mozilla/5.0 (X11; CrOS x86_64 11647.154.0) '
+        'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                        'AppleWebKit/537.36 (KHTML, like Gecko) '
-                       'Chrome/73.0.3683.114 Safari/537.36')
+                       'Chrome/80.0.3987.163 Safari/537.36')
     }
 )
 
