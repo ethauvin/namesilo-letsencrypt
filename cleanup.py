@@ -36,6 +36,7 @@ import sys
 import tempfile
 import urllib.request
 
+import tldextract
 import untangle
 
 from config import apikey
@@ -47,9 +48,11 @@ tmpdir = os.path.join(tempfile.gettempdir(), "CERTBOT_"+domain)
 if "NAMESILO_API" in os.environ:
     apikey = os.environ['NAMESILO_API']
 
-url = "https://www.namesilo.com/api/dnsDeleteRecord\
-?version=1&type=xml&key="+apikey+"&domain="+domain+"&rrid="
+tld = tldextract.extract(domain)
+nsdomain = tld.domain+"."+tld.suffix
 
+url = "https://www.namesilo.com/api/dnsDeleteRecord\
+?version=1&type=xml&key="+apikey+"&domain="+nsdomain+"&rrid="
 
 def getrequest(record_id):
     return urllib.request.Request(

@@ -9,10 +9,12 @@ using [Certbot](https://certbot.eff.org/) DNS-01 challenge validation for domain
 
 ## Setup
 
-The scripts use the [untangle](https://untangle.readthedocs.io/en/latest/) library, if not already installed on your system:
+The scripts use the [untangle](https://untangle.readthedocs.io/en/latest/) and tldextract libraries, if not already installed on your system:
 
 ```
 pip install untangle
+
+pip install tldextract
 ```
 
 Download the [latest release](https://github.com/ethauvin/namesilo-letsencrypt/releases) archive and expand it in the desired directory.
@@ -44,3 +46,4 @@ certbot certonly --manual --email you@example.com \
 </pre>
 
 Please note that NameSilo DNS propagation takes up to **15 minutes**. The scripts will wait **20 minutes** before completing, just to be safe.
+q
