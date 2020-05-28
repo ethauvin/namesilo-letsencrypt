@@ -46,7 +46,6 @@ from config import apikey, wait
 def sleep(minutes):
     if minutes < 16:
         minutes = 16
-    print("Waiting", minutes, "minutes for DNS changes to complete...")
     time.sleep(minutes * 60)
 
 
