@@ -1,6 +1,6 @@
 # NameSilo Let's Encrypt
 
-[![License (3-Clause BSD)](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](http://opensource.org/licenses/BSD-3-Clause)
+[![License (3-Clause BSD)](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=flat-square)](https://opensource.org/licenses/BSD-3-Clause)
 [![Python 3.4](https://img.shields.io/badge/python-3.4-blue.svg)](https://www.python.org/)
 
 Python scripts (hook) to automate obtaining [Let's Encrypt](https://letsencrypt.org/) certificates,
@@ -17,14 +17,13 @@ pip install tldextract untangle
 
 Download the [latest release](https://github.com/ethauvin/namesilo-letsencrypt/releases) archive and expand it in the desired directory.
 
-
 ## Configuration
 
-Add your [NameSilo API key](https://www.namesilo.com/account_api.php)
+Add your [NameSilo API key](https://www.namesilo.com/account/api-manager)
 to the top of the `config.py` file:
 
 ```python
-# Get your API Key from: https://www.namesilo.com/account_api.php
+# Get your API Key from: https://www.namesilo.com/account/api-manager
 apikey = "YOUR_API_KEY"
 ```
 
