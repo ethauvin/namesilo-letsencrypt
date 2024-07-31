@@ -9,6 +9,13 @@ using [Certbot](https://certbot.eff.org/) DNS-01 challenge validation for domain
 
 ## Setup
 
+### Using Package Manager
+
+- For users of Fedora & RHEL, you can install [this COPR package](https://copr.fedorainfracloud.org/coprs/cyqsimon/namesilo-letsencrypt/), packaged by [@cyqsimon](https://github.com/cyqsimon).
+- Feel free to package this repo for other OSes; then please submit a PR to reference it here.
+
+### Manual Install
+
 The scripts use the [tldextract](https://github.com/john-kurkowski/tldextract) and [untangle](https://untangle.readthedocs.io/en/latest/) libraries, if not already installed on your system:
 
 ```
